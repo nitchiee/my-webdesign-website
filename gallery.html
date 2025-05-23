@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sta Ana Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ========== Header ========== */
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            color: #f0f8ff;
+        }
+
+        /* ========== Navigation ========== */
+        nav {
+            background: #444;
+            padding: 0.5cm;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #555;
+            color: #ddd;
+        }
+
+        /* ========== Main Content ========== */
+        main {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* ========== Make Images Smaller ========== */
+        .gallery-item img {
+            width: 100%;
+            max-width: 200px; /* Adjust the size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        /* ========== Make Videos Smaller ========== */
+        .gallery-item video {
+            width: 100%;
+            max-width: 300px; /* Adjust the size */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .audio-container {
+            padding: 10px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        /* ========== Footer ========== */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        /* ========== Responsive Design for Small Screens ========== */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery-item img {
+                max-width: 150px; /* Make images even smaller on mobile */
+            }
+
+            .gallery-item video {
+                max-width: 250px; /* Make videos smaller on mobile */
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="index2.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main>
+        <div class="gallery">
+            <!-- 4 Photos -->
+            <div class="gallery-item">
+                <img src="https://atlantaluxurybags.com/cdn/shop/files/Chanel_14225.jpg?v=1739912909&width=1080" alt="Photo 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://perfumestore.ph/wp-content/uploads/2020/11/CHANEL-BLEU-PARFUM-POUR-HOMME-FOR-MEN-416x489.jpg" alt="Photo 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://cdn.saksfifthavenue.com/is/image/saks/0400020146915?wid=600&hei=800&qlt=90&resMode=sharp2&op_usm=0.9%2C1.0%2C8%2C0" alt="Photo 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://prod-images.fashionphile.com/large/8da471a16cafdd0f2fd89a5614cf1924/50c4c465eddb7726761c6aaa0579474f.jpg" alt="Photo 4">
+            </div>
+
+            <!-- 4 Videos with Audio Controls -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="C:\Users\202412668\OneDrive - adamson.edu.ph\Documents\WebDesignPrinciples_Nicolas\Images\video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="audio1.mp3" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="C:\Users\202412668\OneDrive - adamson.edu.ph\Documents\WebDesignPrinciples_Nicolas\Images\video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="C:\Users\202412668\OneDrive - adamson.edu.ph\Documents\WebDesignPrinciples_Nicolas\Images\video3.mp4" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="C:\Users\202412668\OneDrive - adamson.edu.ph\Documents\WebDesignPrinciples_Nicolas\Images\video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="audio3.mp3" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="C:\Users\202412668\OneDrive - adamson.edu.ph\Documents\WebDesignPrinciples_Nicolas\Images\video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="audio4.mp3" type="audio/mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nicolas. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

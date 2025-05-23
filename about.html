@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      alert("Welcome to my website!");
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Comfortaa', cursive, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #555;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #ffffff;
+      border-radius: 25px;
+      background-color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    main {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #ffffff;
+    }
+
+    .blog-posts {
+      flex: 2;
+      min-width: 600px;
+      margin-right: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 250px;
+      background-color: #ffffff;
+      color: #222;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post {
+      background-color: #ffffff;
+      color: #222;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .post h2 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .post a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .sidebar a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #444;
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .profile-container img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      margin-right: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-container .text {
+      max-width: 600px;
+    }
+
+    .contact-info {
+      margin: 30px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      color: #222;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .contact-info a {
+      color: #007acc;
+    }
+
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-container img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>ABOUT US</h1>
+  </header>
+
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="sample8.html">Dashboard</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <main>
+    <div class="profile-container">
+      <img src="Images/PHOTOIMAGEABOUT.jpg" alt="Nitchie Nicolas' Profile Picture">
+      <div class="text">
+        <p><p>Hello! I'm Nitchie Nicolas, a passionate web designer dedicated to creating clean, user-friendly, and responsive websites. With skills in HTML5, CSS3, and JavaScript, I focus on crafting intuitive designs that enhance user experience. I enjoy exploring new technologies, writing blog posts on web design, and continuously improving my craft. Let’s build something great together!</p>
+    </p>
+
+      </div>
+    </div>
+  </main>
+
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p>Email: nitchiemnicolas@gmail.com</p>
+    <p>Phone: 09995653223</p>
+    <p>Address: Manila City, Philippines</p>
+    <p>Github: <a href="https://github.com/nitchiee">https://github.com/nitchiee</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2024. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+
+

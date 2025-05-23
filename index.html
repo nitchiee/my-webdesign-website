@@ -1,0 +1,205 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog Web Design Principles</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      background: #444;
+      padding: 0.5cm;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    nav a:link {
+      color: white;
+    }
+    nav a:visited {
+      color: purple;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #555;
+      color: #ddd;
+    }
+    nav a:active {
+      color: lightblue;
+      background-color: #555;
+    }
+
+    .popular-links a {
+      color: gray;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .popular-links a.visited {
+      color: purple;
+    }
+
+    .popular-links a:hover,
+    .popular-links a:focus {
+      color: red;
+      text-decoration: underline;
+    }
+
+    .popular-links a:active {
+      color: orange;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    section {
+      flex: 2;
+      padding: 20px;
+      background: white;
+      margin-right: 20px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    aside {
+      flex: 1;
+      padding: 20px;
+      background: white;
+      border-radius: 5px;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .aside-sticky{
+      position: sticky;
+      top: 80px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+    article {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: row;
+      }
+      section, aside {
+        flex: 1;
+        margin-right: 10px;
+      }
+      nav a {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .aside-sticky{
+        position: static;
+      }
+    }
+    .subscribe-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #808080;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .subscribe-button:hover {
+      background-color: #696969;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>All about Chichie</h1>
+    <p>Sharing knowledge about web design, HTML5, CSS, and JavaScript</p>
+  </header>
+  <nav>
+   <a href="index2.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+		 <a href="gallery.html">Gallery</a>
+        
+  </nav>
+  <main>
+    <section>
+      <h2>Latest Blog Posts</h2>
+      <article>
+        <h3>Understanding HTML5 Semantics</h3>
+        <p>HTML5 introduced new semantic elements that help define the structure of web pages...</p>
+        <a href="javascript:void(0);">Read More</a>
+      </article>
+      <article>
+        <h3>CSS Flexbox: A Beginner's Guide</h3>
+        <p>Flexbox is a powerful tool for creating responsive layouts with minimal code...</p>
+        <a href="javascript:void(0);">Read More</a>
+      </article>
+    </section>
+    <aside class="aside-sticky">
+      <h2>What's New</h2>
+      <p></p>
+      <h3 class="popular-links">Popular Topics</h3>
+      <ul class="popular-links" id="popular-links-list">
+        <li><a href="https://www.geeksforgeeks.org/html-css/" onclick="markVisited(event, this)">HTML & CSS Basics</a></li>
+        <li><a href="https://www.codecademy.com/learn/learn-javascript-fundamentals" onclick="markVisited(event, this)">JavaScript Fundamentals</a></li>
+        <li><a href="https://www.w3schools.com/html/html_responsive.asp" onclick="markVisited(event, this)">Responsive Web Design</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" onclick="markVisited(event, this)">Web Accessibility</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2024 My Blog. All rights reserved.</p>
+  </footer>
+  <a href="javascript:void(0);" class="subscribe-button">Subscribe</a>
+
+  <script>
+    function markVisited(event, link) {
+      event.preventDefault(); // Prevent default link behavior
+      link.classList.add('visited');
+    }
+  </script>
+</body>
+</html>

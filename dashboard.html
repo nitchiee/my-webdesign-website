@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+
+  <style>
+    /* ========== Global Styles ========== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* ========== Header & Navigation ========== */
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #555;
+      border-radius: 4px;
+    }
+
+    /* ========== Layout Container ========== */
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    /* ========== Sidebar ========== */
+    .sidebar {
+      width: 240px;
+      background-color: #444;
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 60px;
+      height: calc(100vh - 60px - 60px);
+      overflow-y: auto;
+    }
+
+    .sidebar a {
+      color: white;
+      padding: 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .sidebar a:hover {
+      background: #555;
+    }
+
+    /* ========== Main Content Grid ========== */
+    .main-content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: translateY(-3px);
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.12);
+      background: #f0f0f0;
+    }
+
+    .overview, .insights {
+      grid-column: span 2;
+      height: 180px;
+    }
+
+    /* ========== Footer ========== */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 16px;
+      margin-top: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    /* ========== Fixed Subscribers Box ========== */
+    .subscribers-box {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 101;
+    }
+
+    /* ========== Responsive Design ========== */
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        position: static;
+        height: auto;
+      }
+
+      .main-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .subscribers-box {
+        position: static;
+        margin: 20px auto;
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .overview, .insights {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index2.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="index2.html">Back to Blog</a>
+      <a href="#">Analytics</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
+
+    <div class="main-content">
+      <div class="box">Users</div>
+      <div class="box">Sales</div>
+      <div class="box">Revenue</div>
+      <div class="box">Orders</div>
+      <div class="box">Products</div>
+      <div class="box">Support</div>
+      <div class="box overview">Overview</div>
+      <div class="box insights">Insights</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2024 Dashboard. All rights reserved.
+  </div>
+
+  <div class="subscribers-box">Subscribers: 12,345</div>
+
+</body>
+</html>
